@@ -6,7 +6,7 @@ import { svgs } from "./Svg/svg";
 import { background } from "native-base/lib/typescript/theme/styled-system";
 import { StyleSheet,ImageBackground,View,Text, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
+import LinearGradientContainer from '../Components/LinearGradientContainer';
 
 
 
@@ -25,6 +25,10 @@ const [days,setDays]=useState(14)
    },
    horizontale:{
     flexDirection:'row'
+   },
+   Shadow:{
+    elevation:10,shadowColor:'#EFB054',
+    borderRadius:6,
    }
       
         
@@ -37,7 +41,9 @@ const [days,setDays]=useState(14)
         <View style={{ position:'absolute',width:'100%',height:'100%',zIndex:1,backgroundColor:'#000000d9'}}     ></View>
       <View style={{...tags.horizontale,backgroundColor:'#262B3366',zIndex:2,paddingTop:40,width:'100%',justifyContent:'space-between', paddingHorizontal:32,alignItems:'center',paddingBottom:20,borderBottomRightRadius:24,borderBottomLeftRadius:24 }}>
       <View style={{...tags.horizontale,padding:12,backgroundColor:"#4D5666",borderRadius:16,alignItems:'center',justifyContent:'center'}}>
+        <View style={{ elevation:20,shadowColor:'#B9F2FF',}}>
         <SvgXml xml={svgs[0].dimond}   width="20" height="20"  />
+        </View>
       <Text style={{
         color:'white',
         fontFamily:'Almarai_Light',
@@ -217,7 +223,8 @@ const [days,setDays]=useState(14)
     </View>
 </View>
 <Pressable  onPress={() => navigation.navigate('diamond')}>
-<View style={{ width:'100%',backgroundColor:'#FFAF36',borderRadius:6,paddingVertical:10,elevation:10,shadowColor:'#EFB054'}}>
+  <LinearGradientContainer style={tags.Shadow}>
+<View style={{ width:'100%',paddingVertical:10,elevation:10,shadowColor:'#EFB054'}}>
 <Text style={{
         color:'white',
         fontFamily:'Almarai_Bold',
@@ -225,6 +232,7 @@ const [days,setDays]=useState(14)
         textAlign:'center'
       }} >اشترك بواسطة الألماس</Text>
 </View>
+</LinearGradientContainer>
 </Pressable>
 
 </View>

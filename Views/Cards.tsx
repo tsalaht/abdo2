@@ -6,6 +6,7 @@ import { svgs } from "./Svg/svg";
 import { background } from "native-base/lib/typescript/theme/styled-system";
 import { StyleSheet,ImageBackground,View,Text, ScrollView,Image, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import CardDesigne from '../Components/CardDesigne';
 
 
 
@@ -83,7 +84,9 @@ const [option3,setOption3]=useState(false)
         <View style={{ position:'absolute',width:'100%',height:'100%',zIndex:1,backgroundColor:'#000000d9'}}     ></View>
       <View style={{...tags.horizontale,backgroundColor:'#262B3366',zIndex:2,paddingTop:40,width:'100%',justifyContent:'space-between', paddingHorizontal:32,alignItems:'center',paddingBottom:20,borderBottomRightRadius:24,borderBottomLeftRadius:24 }}>
       <View style={{...tags.horizontale,padding:12,backgroundColor:"#4D5666",borderRadius:16,alignItems:'center',justifyContent:'center'}}>
-        <SvgXml xml={svgs[0].dimond}   width="20" height="20"  />
+      <View style={{ elevation:30,shadowColor:'#B9F2FF',shadowRadius: 99999,}}>
+        <SvgXml xml={svgs[0].dimond}   width="20" height="20"   />
+        </View>
       <Text style={{
         color:'white',
         fontFamily:'Almarai_Light',
@@ -116,7 +119,6 @@ const [option3,setOption3]=useState(false)
 <View style={{alignItems:'center',justifyContent:'center',backgroundColor:'#4D5666',gap:3,flexDirection:'column',paddingVertical:5,paddingHorizontal:14,borderRadius:8}}>
 <SvgXml xml={svgs[0].bok}   width="25" height="25"   />
 <Text style={{...tags.textWhiteMedume,fontSize:10,textAlign:'center'}}>
-
 خلفيات
 {'\n'}
 الجلسة
@@ -126,7 +128,6 @@ const [option3,setOption3]=useState(false)
 <View style={{alignItems:'center',justifyContent:'center',backgroundColor:'#4D5666',gap:4,flexDirection:'column',paddingVertical:3,paddingHorizontal:15,borderRadius:8}}>
 <SvgXml xml={svgs[0].shadowc}   width="32" height="32"   />
 <Text style={{...tags.textWhiteMedume,fontSize:10,textAlign:'center'}}>
-
 تصاميم
 {'\n'}
 الورق
@@ -151,17 +152,12 @@ const [option3,setOption3]=useState(false)
 <View style={{alignItems:'center',justifyContent:'center',backgroundColor:'#4D5666',gap:8,flexDirection:'column',paddingVertical:5,paddingHorizontal:12,borderRadius:8}}>
 <SvgXml xml={svgs[0].shop}   width="16" height="16"   />
 <Text style={{...tags.textWhiteMedume,fontSize:10,textAlign:'center'}}>
-
 المتجر{'\n'}الرئيسي
 </Text>
 </View>
-
 </View>
 </View>
-
      </View>
-
-
 <View style={{...tags.verticale,marginHorizontal:16,paddingBottom:110,alignItems:'center'}}>
 <View style={{...tags.horizontale}}>
   {/* Sodo */}
@@ -170,22 +166,8 @@ const [option3,setOption3]=useState(false)
   setOption2(false)
   setOption3(true)
 }} style={{zIndex:900000000000000000000000000,width:'50%'}}>
-<View style={{...tags.verticale,paddingVertical:8,paddingHorizontal:8,alignItems:'center',justifyContent:'center'}}>
-<BlurView intensity={80} tint="dark" style={{zIndex:22222222,...blure.blurContainer}}>
-<Image source={red}/>
-<Text style={{...tags.textWhiteBold,marginVertical:16}}>
-السدو
-</Text>
-<View style={{...tags.horizontale,gap:8}}>
-<View style={{borderRadius:9999999999,backgroundColor:'#4D5666' ,width:8,height:8}}>
-</View>
-<View style={{borderRadius:9999999999,backgroundColor:'#4D5666' ,width:8,height:8}}>
-</View>
 
-</View>
-
-       </BlurView>
-</View>
+ <CardDesigne imageSource={red} name="السدو" />
 </Pressable>
 {/* Qaid */}
 <Pressable onPress={()=>{
@@ -193,25 +175,7 @@ const [option3,setOption3]=useState(false)
   setOption2(true)
   setOption3(false)
 }}style={{zIndex:900000000000000000000000000,width:'50%'}}>
-<View style={{...tags.verticale,paddingVertical:8,paddingHorizontal:8,alignItems:'center',justifyContent:'center'}}>
-<BlurView intensity={80} tint="dark" style={{zIndex:22222222,...blure.blurContainer}}>
-<Image source={cards}/>
-<Text style={{...tags.textWhiteBold,marginVertical:16}}>
-قيد
-</Text>
-<View style={{...tags.horizontale,gap:8}}>
-<View style={{borderRadius:9999999999,backgroundColor:'#4D5666' ,width:8,height:8}}>
-</View>
-<View style={{borderRadius:9999999999,backgroundColor:'#4D5666' ,width:8,height:8}}>
-</View>
-<View style={{borderRadius:9999999999,backgroundColor:'#4D5666' ,width:8,height:8}}>
-</View>
-
-
-</View>
-
-       </BlurView>
-</View>
+ <CardDesigne imageSource={cards} name="قيد" />
 </Pressable>
 
 </View>
@@ -221,27 +185,9 @@ const [option3,setOption3]=useState(false)
   setOption2(false)
   setOption3(false)
 }} style={{zIndex:900000000000000000000000000,width:'50%'}}>
-<View style={{...tags.verticale,paddingVertical:8,paddingHorizontal:8,alignItems:'center',justifyContent:'center'}}>
-<BlurView intensity={80} tint="dark" style={{zIndex:22222222,...blure.blurContainer}}>
-<Image source={arbic}/>
-<Text style={{...tags.textWhiteBold,marginVertical:16}}>
-السعودية
-</Text>
-<View style={{...tags.horizontale,gap:8}}>
-<View style={{borderRadius:9999999999,backgroundColor:'#4D5666' ,width:8,height:8}}>
-</View>
-<View style={{borderRadius:9999999999,backgroundColor:'#4D5666' ,width:8,height:8}}>
-</View>
-
-</View>
-
-       </BlurView>
-</View>
+ <CardDesigne imageSource={arbic} name="السعودية" />
 </Pressable>
 </View>
-
-   
-
 <View  style={{ ...tags.horizontale,position:'absolute',backgroundColor:'#262B33E6',paddingVertical:23,bottom:0,zIndex:3,width:'100%',paddingHorizontal:32,justifyContent:'center',gap:25,borderTopLeftRadius:24,borderTopRightRadius:24}}>
 <View style={{...tags.verticale,alignItems:'center'}}>
 <View style={{padding:3,backgroundColor:'#4D5666',borderRadius:16}}>

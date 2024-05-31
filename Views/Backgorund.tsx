@@ -6,6 +6,8 @@ import { svgs } from "./Svg/svg";
 import { background } from "native-base/lib/typescript/theme/styled-system";
 import { StyleSheet,ImageBackground,View,Text, ScrollView,Image, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import BackgroundCard from '../Components/BackgroundCard';
+
 
 
 
@@ -79,7 +81,9 @@ const Backgorund : React.FC  = () => {
         <View style={{ position:'absolute',width:'100%',height:'100%',zIndex:1,backgroundColor:'#000000d9'}}     ></View>
       <View style={{...tags.horizontale,backgroundColor:'#262B3366',zIndex:2,paddingTop:40,width:'100%',justifyContent:'space-between', paddingHorizontal:32,alignItems:'center',paddingBottom:20,borderBottomRightRadius:24,borderBottomLeftRadius:24 }}>
       <View style={{...tags.horizontale,padding:12,backgroundColor:"#4D5666",borderRadius:16,alignItems:'center',justifyContent:'center'}}>
-        <SvgXml xml={svgs[0].dimond}   width="20" height="20"  />
+      <View style={{  elevation:20,shadowColor:'#B9F2FF',backgroundColor:'transparent'}}>
+        <SvgXml xml={svgs[0].dimond}   width="20" height="20"   />
+        </View>
       <Text style={{
         color:'white',
         fontFamily:'Almarai_Light',
@@ -160,159 +164,59 @@ const Backgorund : React.FC  = () => {
 
 <View style={{...tags.verticale,marginHorizontal:16,paddingBottom:110}}>
 <View style={{...tags.horizontale}}>
-<View style={{...tags.verticale,paddingVertical:8,paddingHorizontal:8,alignItems:'center',justifyContent:'center',width:'50%'}}>
-<BlurView intensity={80} tint="dark" style={{zIndex:22222222,...blure.blurContainer}}>
-<SvgXml xml={svgs[0].qaa}      />
-<Text style={{...tags.textWhiteBold,marginVertical:16}}>
-الوادي
-</Text>
-<View style={{ width:'100%',backgroundColor:'#FFAF36',borderRadius:6,paddingVertical:10,elevation:10,shadowColor:'#EFB054',marginBottom:8,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
-<SvgXml xml={svgs[0].dimond }      />
-<Text style={{
-        color:'white',
-        fontFamily:'Almarai_Bold',
-        fontSize:10,
-        textAlign:'center'
-      }} >تأجير لمدة 7 أيام بـ   500</Text>
-</View>
 
-       </BlurView>
-</View>
-<View style={{...tags.verticale,paddingVertical:8,paddingHorizontal:8,alignItems:'center',justifyContent:'center',width:'50%'}}>
-<BlurView intensity={80} tint="dark" style={{zIndex:22222222,...blure.blurContainer}}>
-<SvgXml xml={svgs[0].qaa}      />
-<Text style={{...tags.textWhiteBold,marginVertical:16}}>
-الوادي
-</Text>
-<View style={{ width:'100%',backgroundColor:'#FFAF36',borderRadius:6,paddingVertical:10,elevation:10,shadowColor:'#EFB054',marginBottom:8,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
-<SvgXml xml={svgs[0].dimond }      />
-<Text style={{
-        color:'white',
-        fontFamily:'Almarai_Bold',
-        fontSize:10,
-        textAlign:'center'
-      }} >تأجير لمدة 7 أيام بـ   500</Text>
-</View>
-
-       </BlurView>
-</View>
+ <BackgroundCard
+          svgXml={svgs[0].qaa}
+          name="الوادي"
+          rentalIcon={svgs[0].dimond}
+        />
+ <BackgroundCard
+          svgXml={svgs[0].qaa}
+          name="الوادي"
+          rentalIcon={svgs[0].dimond}
+        />
 
 </View>
 <View style={{...tags.horizontale}}>
-<View style={{...tags.verticale,paddingVertical:8,paddingHorizontal:8,alignItems:'center',justifyContent:'center',width:'50%'}}>
-<BlurView intensity={80} tint="dark" style={{zIndex:22222222,...blure.blurContainer}}>
-<SvgXml xml={svgs[0].qaa}      />
-<Text style={{...tags.textWhiteBold,marginVertical:16}}>
-الوادي
-</Text>
-<View style={{ width:'100%',backgroundColor:'#FFAF36',borderRadius:6,paddingVertical:10,elevation:10,shadowColor:'#EFB054',marginBottom:8,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
-<SvgXml xml={svgs[0].dimond }      />
-<Text style={{
-        color:'white',
-        fontFamily:'Almarai_Bold',
-        fontSize:10,
-        textAlign:'center'
-      }} >تأجير لمدة 7 أيام بـ   500</Text>
-</View>
 
-       </BlurView>
-</View>
-<View style={{...tags.verticale,paddingVertical:8,paddingHorizontal:8,alignItems:'center',justifyContent:'center',width:'50%'}}>
-<BlurView intensity={80} tint="dark" style={{zIndex:22222222,...blure.blurContainer}}>
-<SvgXml xml={svgs[0].qaa}      />
-<Text style={{...tags.textWhiteBold,marginVertical:16}}>
-الوادي
-</Text>
-<View style={{ width:'100%',backgroundColor:'#FFAF36',borderRadius:6,paddingVertical:10,elevation:10,shadowColor:'#EFB054',marginBottom:8,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
-<SvgXml xml={svgs[0].dimond }      />
-<Text style={{
-        color:'white',
-        fontFamily:'Almarai_Bold',
-        fontSize:10,
-        textAlign:'center'
-      }} >تأجير لمدة 7 أيام بـ   500</Text>
-</View>
-
-       </BlurView>
-</View>
+ <BackgroundCard
+          svgXml={svgs[0].qaa}
+          name="الوادي"
+          rentalIcon={svgs[0].dimond}
+        />
+ <BackgroundCard
+          svgXml={svgs[0].qaa}
+          name="الوادي"
+          rentalIcon={svgs[0].dimond}
+        />
 
 </View>
 <View style={{...tags.horizontale}}>
-<View style={{...tags.verticale,paddingVertical:8,paddingHorizontal:8,alignItems:'center',justifyContent:'center',width:'50%'}}>
-<BlurView intensity={80} tint="dark" style={{zIndex:22222222,...blure.blurContainer}}>
-<SvgXml xml={svgs[0].qaa}      />
-<Text style={{...tags.textWhiteBold,marginVertical:16}}>
-الوادي
-</Text>
-<View style={{ width:'100%',backgroundColor:'#FFAF36',borderRadius:6,paddingVertical:10,elevation:10,shadowColor:'#EFB054',marginBottom:8,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
-<SvgXml xml={svgs[0].dimond }      />
-<Text style={{
-        color:'white',
-        fontFamily:'Almarai_Bold',
-        fontSize:10,
-        textAlign:'center'
-      }} >تأجير لمدة 7 أيام بـ   500</Text>
-</View>
 
-       </BlurView>
-</View>
-<View style={{...tags.verticale,paddingVertical:8,paddingHorizontal:8,alignItems:'center',justifyContent:'center',width:'50%'}}>
-<BlurView intensity={80} tint="dark" style={{zIndex:22222222,...blure.blurContainer}}>
-<SvgXml xml={svgs[0].qaa}      />
-<Text style={{...tags.textWhiteBold,marginVertical:16}}>
-الوادي
-</Text>
-<View style={{ width:'100%',backgroundColor:'#FFAF36',borderRadius:6,paddingVertical:10,elevation:10,shadowColor:'#EFB054',marginBottom:8,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
-<SvgXml xml={svgs[0].dimond }      />
-<Text style={{
-        color:'white',
-        fontFamily:'Almarai_Bold',
-        fontSize:10,
-        textAlign:'center'
-      }} >تأجير لمدة 7 أيام بـ   500</Text>
-</View>
-
-       </BlurView>
-</View>
+ <BackgroundCard
+          svgXml={svgs[0].qaa}
+          name="الوادي"
+          rentalIcon={svgs[0].dimond}
+        />
+ <BackgroundCard
+          svgXml={svgs[0].qaa}
+          name="الوادي"
+          rentalIcon={svgs[0].dimond}
+        />
 
 </View>
 <View style={{...tags.horizontale}}>
-<View style={{...tags.verticale,paddingVertical:8,paddingHorizontal:8,alignItems:'center',justifyContent:'center',width:'50%'}}>
-<BlurView intensity={80} tint="dark" style={{zIndex:22222222,...blure.blurContainer}}>
-<SvgXml xml={svgs[0].qaa}      />
-<Text style={{...tags.textWhiteBold,marginVertical:16}}>
-الوادي
-</Text>
-<View style={{ width:'100%',backgroundColor:'#FFAF36',borderRadius:6,paddingVertical:10,elevation:10,shadowColor:'#EFB054',marginBottom:8,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
-<SvgXml xml={svgs[0].dimond }      />
-<Text style={{
-        color:'white',
-        fontFamily:'Almarai_Bold',
-        fontSize:10,
-        textAlign:'center'
-      }} >تأجير لمدة 7 أيام بـ   500</Text>
-</View>
 
-       </BlurView>
-</View>
-<View style={{...tags.verticale,paddingVertical:8,paddingHorizontal:8,alignItems:'center',justifyContent:'center',width:'50%'}}>
-<BlurView intensity={80} tint="dark" style={{zIndex:22222222,...blure.blurContainer}}>
-<SvgXml xml={svgs[0].qaa}      />
-<Text style={{...tags.textWhiteBold,marginVertical:16}}>
-الوادي
-</Text>
-<View style={{ width:'100%',backgroundColor:'#FFAF36',borderRadius:6,paddingVertical:10,elevation:10,shadowColor:'#EFB054',marginBottom:8,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
-<SvgXml xml={svgs[0].dimond }      />
-<Text style={{
-        color:'white',
-        fontFamily:'Almarai_Bold',
-        fontSize:10,
-        textAlign:'center'
-      }} >تأجير لمدة 7 أيام بـ   500</Text>
-</View>
-
-       </BlurView>
-</View>
+ <BackgroundCard
+          svgXml={svgs[0].qaa}
+          name="الوادي"
+          rentalIcon={svgs[0].dimond}
+        />
+ <BackgroundCard
+          svgXml={svgs[0].qaa}
+          name="الوادي"
+          rentalIcon={svgs[0].dimond}
+        />
 
 </View>
 </View>
